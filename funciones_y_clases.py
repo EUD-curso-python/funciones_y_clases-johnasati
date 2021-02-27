@@ -39,7 +39,7 @@ def anio_bisiesto(año):
 anio_bisiesto(2020)
 
 
-def contar_valles():
+def contar_valles(lista):
     r'''Contar el número de valles
 
     Esta función debe recibir como argumento una lista de -1's, 0's y 1's, y lo 
@@ -57,7 +57,28 @@ def contar_valles():
     representados en la lista, que para el ejemplo que se acaba de mostrar es
     de 3 valles.
     '''
+    conteo = 0
+    n = 0
+    
+    for el in lista:
+      print('n',n)
+      print('el',el)
+      if el == -1 and lista[n-1] > -1:
+        conteo += 1
+      n +- 1
+    return conteo
     pass
+    
+    #cont = 0
+    #for i in lista:
+      #if i == 0:
+        #count += 1
+    #print(cont)
+    #return cont
+
+    #pass
+
+#contar_valles([-1,1,0,1,1,-1,0,0,1,-1,1,1,-1,-1])
 
 def saltando_rocas():
     '''Mínimo número de saltos en las rocas
@@ -75,7 +96,7 @@ def saltando_rocas():
     '''
     pass
 
-def pares_medias():
+def pares_medias(*args):
     '''Contar pares de medias
 
     Esta función debe recibir como argumento una lista de enteros. Cada elemento
@@ -85,7 +106,42 @@ def pares_medias():
     uno de los colores que se encuentren en la lista, y los valores son la 
     cantidad de pares que se han encontrado para cada color.
     '''
-    pass
+    #Val1 = {}
+    #no_pares = []
+    #print['colores']
+    #for el in ti:
+      #Val1.setdefault[el,0]
+      #print(Val1)
+    #print['medias']
+    #for el in ti:
+      #Val1[el] += 1
+      #print(Val1)
+    #print['pares']
+    #for el2 in Val1:
+      #Val1[el2] = Val1[el2]//2
+    #print[Val1]
+    #for el2 in Val1:
+      #if Val1[el2] == 0:
+        #no_pares.append[el2]
+    #print['no pares']
+    #print[no_pares]
+    #for el3 in no_pares:
+      #del Val1[el3]
+    #return Val1
+    #pass
+  #test = [1,2,3,4,1,3,6,2,3,3,6]
+  #print[test]
+  #print[pares_medias(test)]
+
+
+    pares = {}
+    lista = []
+    for i in args:
+        lista.append(i)
+        pares [1] = int(lista.count(1)/2)
+    print(pares)
+
+pares_medias(1,2,3,4,5,3,2,1,1,1,1,2,3,3,4,2,1,1,23,3,4,1)
 
 # Crear una clase llamada `ListaComa` que reciba en su constructor un iterable
 # con el valor inicial para una lista que se guardará en un atributo llamado 
@@ -126,4 +182,28 @@ def pares_medias():
 # Ejemplo:
 # si `fecha_nacimiento` es 1985-10-21 y la fecha actual es 2020-10-20, el método
 # `edad` debe devover 35.
+
+
+
+#class Persona1(personas):
+  #def __init__(self,nombres,apellidos,fecha_nacimiento):
+    #super().__init__(nombres,apellidos)
+    #self.fecha_nacimiento = fecha_nacimiento
+  
+  #def edad(self):
+    #delta = datetime.datetime.today[] - self.fecha_nacimiento
+    #print(delta)
+    #dias = delta / datetime.tinedelta(1)
+    #print(dias)
+    #salida = int[dias/365)
+    #salida = delta.years()
+    #print[salida]
+    #return salida
+
+#fecha = datetime.datetime.strptime('1991-03-06', '%Y-%m-%d')
+#personas = Persona1(['john','alexander','jose'],['sanchez','tirado','amadeo'],fecha)
+#print(personas.edad)
+  
+
+
 

@@ -30,7 +30,7 @@ def anio_bisiesto(año):
     Retorna True o False
     '''
     
-    if (año % 400 == 0) and (año % 100 != 0) and (año % 4 == 0):
+    if año % 400 == 0 or (año % 100 != 0 and año % 4 == 0):
       return True
     else:
       return False

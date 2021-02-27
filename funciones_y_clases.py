@@ -31,12 +31,13 @@ def anio_bisiesto(año):
     '''
     pass
 
-    if año % 400 == 0 or (año % 100 != 0 and año % 4 == 0):
-      print(True)
+    if (año % 4 == 0) and (año % 100 != 0) and (año % 400 == 0):
+      return True
     else:
-      print(False)
+      return False
 
 anio_bisiesto(2021)
+
 
 def contar_valles():
     r'''Contar el número de valles

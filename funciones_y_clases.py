@@ -8,6 +8,13 @@ def cambiar_global():
     '''
     pass
 
+    global global1
+    global1 = 0
+    print(global1)
+
+    print(global1)
+    cambiar_global(12)
+    print(global1)
 
 def anio_bisiesto():
     '''Responder si el entero pasado como argumento es un año bisiesto

@@ -29,13 +29,13 @@ def anio_bisiesto(año):
 
     Retorna True o False
     '''
-    pass
-
-    if (año % 4 == 0) and (año % 100 != 0) and (año % 400 == 0):
+    
+    if (año % 400 == 0) and (año % 100 != 0) and (año % 4 == 0):
       return True
     else:
       return False
-
+    pass
+    
 anio_bisiesto(2020)
 
 

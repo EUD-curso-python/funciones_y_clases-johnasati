@@ -39,7 +39,7 @@ def anio_bisiesto(año):
 anio_bisiesto(2020)
 
 
-def contar_valles(lista):
+def contar_valles(*args):
     r'''Contar el número de valles
 
     Esta función debe recibir como argumento una lista de -1's, 0's y 1's, y lo 
@@ -57,28 +57,31 @@ def contar_valles(lista):
     representados en la lista, que para el ejemplo que se acaba de mostrar es
     de 3 valles.
     '''
-    conteo = 0
-    n = 0
+    #conteo = 0
+    #n = 0
     
-    for el in lista:
-      print('n',n)
-      print('el',el)
-      if el == -1 and lista[n-1] > -1:
-        conteo += 1
-      n +- 1
-    return conteo
-    pass
-    
-    #cont = 0
-    #for i in lista:
-      #if i == 0:
-        #count += 1
-    #print(cont)
-    #return cont
-
+    #for el in lista:
+      #print('n',n)
+      #print('el',el)
+      #if el == -1 and lista[n-1] > -1:
+        #conteo += 1
+      #n +- 1
+    #return conteo
     #pass
+    #contar_valles([-1,1,0,1,1,-1,0,0,1,-1,1,1,-1,-1])
 
-#contar_valles([-1,1,0,1,1,-1,0,0,1,-1,1,1,-1,-1])
+    conteo = 0
+    for i in args:
+      for e in args+1:
+        if i == 1 and e == -1:
+          conteo += 1
+        else:
+          conteo
+      print(conteo)
+      
+args = [1,-1,1,1,-1,0,0,1,-1,1,1,-1,-1]
+pass
+
 
 def saltando_rocas():
     '''Mínimo número de saltos en las rocas
@@ -96,7 +99,7 @@ def saltando_rocas():
     '''
     pass
 
-def pares_medias(*args):
+def pares_medias(t1):
     '''Contar pares de medias
 
     Esta función debe recibir como argumento una lista de enteros. Cada elemento
@@ -106,6 +109,20 @@ def pares_medias(*args):
     uno de los colores que se encuentren en la lista, y los valores son la 
     cantidad de pares que se han encontrado para cada color.
     '''
+
+    pares = {}
+    for n in t1:
+        #print(n)
+        i = int(t1.count(n)/2)
+        #print(i)
+        if i > 0:
+            pares[n] = i
+    #print(pares)
+    return pares
+
+pares_medias([2,3,5,6,6,7,3,2,5,5,5])
+
+
     #Val1 = {}
     #no_pares = []
     #print['colores']
@@ -134,14 +151,19 @@ def pares_medias(*args):
   #print[pares_medias(test)]
 
 
-    pares = {}
-    lista = []
-    for i in args:
-        lista.append(i)
-        pares [1] = int(lista.count(1)/2)
-    print(pares)
+    #pares = {}
+    #lista = []
+    #for i in args:
+        #lista.append(i)
+        #pares [1] = int(lista.count(i)/2)
+        #if pares [i] == 0:
+          #del pares[i]
+          
+    #print(pares)
+    #return pares
+  #pares_medias(1,1,2,2,3,3,4,4,5,5,2,1,3,6,3)
 
-pares_medias(1,2,3,4,5,3,2,1,1,1,1,2,3,3,4,2,1,1,23,3,4,1)
+
 
 # Crear una clase llamada `ListaComa` que reciba en su constructor un iterable
 # con el valor inicial para una lista que se guardará en un atributo llamado 
@@ -161,6 +183,9 @@ pares_medias(1,2,3,4,5,3,2,1,1,1,1,2,3,3,4,2,1,1,23,3,4,1)
 # cada una de las dos listas para que su primera letra sea mayúscula y las demás
 # minúsculas.
 #
+
+
+
 # Implementar el método `nombre_completo` para que devuelva un string con todos 
 # los elementos de `nombres` concatenados con espacio, y esto a su vez 
 # concatenado con todos los elementos de `appelidos` concatenados con espacio.
